@@ -2,8 +2,6 @@
 
 using Learning_CSharp_.NET.Models;
 
-Console.WriteLine("Hello World!");
-
 Person testPerson = new() // camelCase
 {
     Name = "Bob",
