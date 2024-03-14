@@ -1,2 +1,4 @@
 bin
 obj
+Projects.*.bin
+Projects.*.obj

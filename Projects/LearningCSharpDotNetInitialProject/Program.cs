@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Learning_CSharp_.NET.Models;
+using LearningCSharpDotNetCommon.Models;
 
 Person testPerson = new() // camelCase
 {
