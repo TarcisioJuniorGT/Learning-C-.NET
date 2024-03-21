@@ -1,11 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using LearningCSharpDotNetCommon.Models;
+using Newtonsoft.Json;
 
-using LearningCSharpDotNetCommon.Models;
+Person firstPerson = new("Bob", 23);
+Person secondPerson = new("Ana", 22);
 
-Person testPerson = new() // camelCase
+List<Person> personList = [firstPerson, secondPerson];
+
+string serialized = JsonConvert.SerializeObject(personList, Formatting.Indented);
+
+File.WriteAllText("./files/person.json", serialized);
+
+string deserialized = File.ReadAllText("./files/person.json");
+
+List<Person>? personListRead = JsonConvert.DeserializeObject<List<Person>>(deserialized);
+
+foreach (Person p in personListRead)
 {
-    Name = "Bob",
-    Age = 23
-};
-
-testPerson.Presentation();
+    Console.WriteLine($"Name: {p.Name} - Age: {p.Age}");
+}
