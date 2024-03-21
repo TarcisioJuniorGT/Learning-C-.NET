@@ -3,4 +3,4 @@ bin
 obj
 Projects/**/bin
 Projects/**/obj
-Projects/**/files/*
+Projects/**/files/*.*
